@@ -33,11 +33,27 @@ describe("Action", () => {
     const result = await action({ name: "Dave" });
     expect(result.success).toEqual(true);
   });
+  it("executes successfully with valid input and returns correct output", async () => {
+    const action = new Action()
+      .setInputSchema(inputSchema)
+      .setActionFn<{ data: string }>(async () => {
+        return {
+          success: true,
+          message: "Successfully submitted",
+          payload: {
+            data: "Value",
+          },
+        };
+      });
+
+    const result = await action({ name: "Dave" });
+    expect(result.success && result.payload.data).toEqual("Value");
+  });
   it("throws if action function is not set", async () => {
     const action = new Action()
       .setInputSchema(inputSchema)
       .setActionFn(
-        undefined as unknown as ActionFn<typeof inputSchema, object>,
+        undefined as unknown as ActionFn<typeof inputSchema, void, object>,
       );
 
     await expect(action({ name: "Dave" })).rejects.toThrow();
