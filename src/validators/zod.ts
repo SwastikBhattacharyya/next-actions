@@ -1,7 +1,6 @@
 import z, { safeParse } from "zod";
-import { $ZodIssue } from "zod/v4/core/errors.cjs";
-import { $ZodType } from "zod/v4/core/schemas.cjs";
-import { ValidatorReturnNoContext } from "../types";
+import { $ZodIssue, $ZodType } from "zod/v4/core";
+import { ValidationResultWithoutContext } from "../types";
 
 type ZodValidatorError = {
   zodValidator_invalidParams: { issues: $ZodIssue[] };
@@ -10,7 +9,7 @@ type ZodValidatorError = {
 export async function zodValidator<Schema extends $ZodType>(
   schema: Schema,
   params: z.infer<Schema>,
-): ValidatorReturnNoContext<ZodValidatorError> {
+): ValidationResultWithoutContext<ZodValidatorError> {
   const result = safeParse(schema, params);
   if (!result.success)
     return {

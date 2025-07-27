@@ -1,6 +1,6 @@
 import z from "zod";
-import { $ZodType } from "zod/v4/core/schemas.cjs";
-import { ActionFn, ActionResult, ValidationFn } from "./types";
+import { $ZodType } from "zod/v4/core";
+import { ActionHandler, ActionResult, ValidationHandler } from "./types";
 
 export class Action<
   InputSchema extends $ZodType,
@@ -9,8 +9,8 @@ export class Action<
   ErrorMap extends object,
 > {
   private context: Context;
-  private validators: ValidationFn<InputSchema, Context, object, object>[];
-  private actionFn?: ActionFn<InputSchema, Output, Context, ErrorMap>;
+  private validators: ValidationHandler<InputSchema, Context, object, object>[];
+  private actionFn?: ActionHandler<InputSchema, Output, Context, ErrorMap>;
 
   constructor() {
     this.context = {} as Context;
@@ -33,7 +33,7 @@ export class Action<
     OutputContext extends void | object = void,
     OutputErrorMap extends void | object = void,
   >(
-    validator: ValidationFn<
+    validator: ValidationHandler<
       InputSchema,
       Context,
       OutputContext,
@@ -41,7 +41,7 @@ export class Action<
     >,
   ) {
     (
-      this.validators as ValidationFn<
+      this.validators as ValidationHandler<
         InputSchema,
         Context,
         OutputContext,
@@ -57,9 +57,9 @@ export class Action<
   }
 
   setActionFn<Output extends void | object = void>(
-    actionFn: ActionFn<InputSchema, Output, Context, ErrorMap>,
+    actionFn: ActionHandler<InputSchema, Output, Context, ErrorMap>,
   ) {
-    (this.actionFn as unknown as ActionFn<
+    (this.actionFn as unknown as ActionHandler<
       InputSchema,
       Output,
       Context,

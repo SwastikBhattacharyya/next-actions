@@ -1,6 +1,6 @@
 import z from "zod";
 import { Action } from "../src/action";
-import { ActionFn } from "../src/types";
+import { ActionHandler } from "../src/types";
 
 const inputSchema = z.object({
   name: z.string().min(2, {
@@ -53,7 +53,7 @@ describe("Action", () => {
     const action = new Action()
       .setInputSchema(inputSchema)
       .setActionFn(
-        undefined as unknown as ActionFn<
+        undefined as unknown as ActionHandler<
           typeof inputSchema,
           void,
           object,
