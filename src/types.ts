@@ -57,6 +57,19 @@ export type ValidationResult<
           ok: false;
         });
 
+export type ValidatorReturn<
+  OutputContext extends void | object,
+  ErrorMap extends unknown | object,
+> = Promise<ValidationResult<OutputContext, ErrorMap>>;
+
+export type ValidatorReturnNoContext<ErrorMap extends unknown | object> =
+  Promise<ValidationResult<void, ErrorMap>>;
+
+export type ValidatorReturnNoError<OutputContext extends void | object> =
+  Promise<ValidationResult<OutputContext, unknown>>;
+
+export type ValidatorReturnAny<> = Promise<ValidationResult<void, unknown>>;
+
 export type ValidationFn<
   InputSchema extends $ZodType,
   Context extends object,
@@ -68,4 +81,4 @@ export type ValidationFn<
 }: {
   params: z.infer<InputSchema>;
   context: Context;
-}) => Promise<ValidationResult<OutputContext, ErrorMap>>;
+}) => ValidatorReturn<OutputContext, ErrorMap>;
