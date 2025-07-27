@@ -1,6 +1,6 @@
 {
   "name": "next-actions",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A type-safe utility for defining server actions and backend data access layers.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
