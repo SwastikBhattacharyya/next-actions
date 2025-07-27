@@ -53,7 +53,12 @@ describe("Action", () => {
     const action = new Action()
       .setInputSchema(inputSchema)
       .setActionFn(
-        undefined as unknown as ActionFn<typeof inputSchema, void, object>,
+        undefined as unknown as ActionFn<
+          typeof inputSchema,
+          void,
+          object,
+          object
+        >,
       );
 
     await expect(action({ name: "Dave" })).rejects.toThrow();
