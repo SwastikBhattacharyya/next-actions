@@ -9,13 +9,24 @@ const inputSchema = z.object({
 });
 
 describe("Action", () => {
-  it("executes successfully with valid input", async () => {
+  it("receives correct params and context", async () => {
     const action = new Action()
       .setInputSchema(inputSchema)
-      .setActionFn(async ({ params }) => {
+      .setActionFn(async ({ params, context }) => {
         expect(params).toEqual({
           name: "Dave",
         });
+        expect(context.inputSchema).toEqual(inputSchema);
+        return { success: true, message: "Successfully submitted" };
+      });
+
+    const result = await action({ name: "Dave" });
+    expect(result.success).toEqual(true);
+  });
+  it("executes successfully with valid input", async () => {
+    const action = new Action()
+      .setInputSchema(inputSchema)
+      .setActionFn(async () => {
         return { success: true, message: "Successfully submitted" };
       });
 
@@ -25,7 +36,9 @@ describe("Action", () => {
   it("throws if action function is not set", async () => {
     const action = new Action()
       .setInputSchema(inputSchema)
-      .setActionFn(undefined as unknown as ActionFn<typeof inputSchema>);
+      .setActionFn(
+        undefined as unknown as ActionFn<typeof inputSchema, object>,
+      );
 
     await expect(action({ name: "Dave" })).rejects.toThrow();
   });

@@ -11,8 +11,10 @@ export type ActionResult =
       message: string;
     };
 
-export type ActionFn<InputSchema extends $ZodType> = ({
+export type ActionFn<InputSchema extends $ZodType, Context extends object> = ({
   params,
+  context,
 }: {
   params: z.infer<InputSchema>;
+  context: Context;
 }) => Promise<ActionResult>;
