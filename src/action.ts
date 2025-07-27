@@ -1,11 +1,12 @@
-import z, { ZodType } from "zod";
+import z from "zod";
+import { $ZodType } from "zod/v4/core/schemas.cjs";
 import { ActionFn, ActionResult } from "./types";
 
-export class Action<InputSchema extends ZodType> {
+export class Action<InputSchema extends $ZodType> {
   private inputSchema?: InputSchema;
   private actionFn?: ActionFn<InputSchema>;
 
-  setInputSchema<Schema extends ZodType>(schema: Schema) {
+  setInputSchema<Schema extends $ZodType>(schema: Schema) {
     (this.inputSchema as unknown as Schema) = schema;
     return this as unknown as Action<Schema>;
   }
