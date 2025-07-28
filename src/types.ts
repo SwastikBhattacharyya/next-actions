@@ -3,7 +3,7 @@ import { $ZodType } from "zod/v4/core";
 
 export type ActionResult<
   SuccessPayload extends void | object,
-  ErrorMap extends unknown | object,
+  ErrorMap extends void | object,
 > =
   | (SuccessPayload extends void
       ? {
@@ -25,15 +25,17 @@ export type ActionResult<
       };
     }[keyof ErrorMap]);
 
-export type ActionResultSuccess<SuccessPayload extends void | object> = Promise<
-  ActionResult<SuccessPayload, void>
->;
+export type ActionResultWithoutPayload<ErrorMap extends void | object> =
+  Promise<ActionResult<void, ErrorMap>>;
 
-export type ActionResultSimple = Promise<ActionResult<void, void>>;
+export type ActionResultWithoutError<SuccessPayload extends void | object> =
+  Promise<ActionResult<SuccessPayload, void>>;
+
+export type ActionResultAny = Promise<ActionResult<void, void>>;
 
 export type ValidationResult<
   OutputContext extends void | object,
-  ErrorMap extends unknown | object,
+  ErrorMap extends void | object,
 > =
   | (OutputContext extends object
       ? {
@@ -53,24 +55,19 @@ export type ValidationResult<
           ok: false;
         });
 
-export type ValidationResultWithContext<
-  OutputContext extends void | object,
-  ErrorMap extends unknown | object,
-> = Promise<ValidationResult<OutputContext, ErrorMap>>;
-
-export type ValidationResultWithoutContext<ErrorMap extends unknown | object> =
+export type ValidationResultWithoutContext<ErrorMap extends void | object> =
   Promise<ValidationResult<void, ErrorMap>>;
 
 export type ValidationResultWithoutError<OutputContext extends void | object> =
-  Promise<ValidationResult<OutputContext, unknown>>;
+  Promise<ValidationResult<OutputContext, void>>;
 
-export type ValidationResultAny = Promise<ValidationResult<void, unknown>>;
+export type ValidationResultAny = Promise<ValidationResult<void, void>>;
 
 export type ActionHandler<
   InputSchema extends $ZodType,
   Output extends void | object,
   Context extends object,
-  ErrorMap extends unknown | object,
+  ErrorMap extends void | object,
 > = ({
   params,
   context,
@@ -83,11 +80,11 @@ export type ValidationHandler<
   InputSchema extends $ZodType,
   Context extends object,
   OutputContext extends void | object,
-  ErrorMap extends unknown | object,
+  ErrorMap extends void | object,
 > = ({
   params,
   context,
 }: {
   params: z.infer<InputSchema>;
   context: Context;
-}) => ValidationResultWithContext<OutputContext, ErrorMap>;
+}) => Promise<ValidationResult<OutputContext, ErrorMap>>;
