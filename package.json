@@ -2,12 +2,17 @@
   "name": "next-actions",
   "version": "0.2.0",
   "description": "A type-safe utility for defining server actions and backend data access layers.",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "import": "./dist/*.js"
+    }
+  },
   "scripts": {
     "build": "tsup",
     "test": "jest"
@@ -32,6 +37,7 @@
     "typescript-eslint": "^8.38.0"
   },
   "dependencies": {
+    "next-actions": "link:../../.local/share/pnpm/global/5/node_modules/next-actions",
     "zod": "^4.0.10"
   }
 }
