@@ -56,17 +56,23 @@ export class Action<
     >;
   }
 
-  setActionFn<Output extends void | object = void>(
-    actionFn: ActionHandler<InputSchema, Output, Context, ErrorMap>,
-  ) {
+  setActionFn<
+    Output extends void | object = void,
+    OutputErrorMap extends void | object = void,
+  >(actionFn: ActionHandler<InputSchema, Output, Context, OutputErrorMap>) {
     (this.actionFn as unknown as ActionHandler<
       InputSchema,
       Output,
       Context,
-      ErrorMap
+      OutputErrorMap
     >) = actionFn;
     return (
-      this as unknown as Action<InputSchema, Output, Context, ErrorMap>
+      this as unknown as Action<
+        InputSchema,
+        Output,
+        Context,
+        ErrorMap & (OutputErrorMap extends void ? object : OutputErrorMap)
+      >
     ).execute.bind(this);
   }
 

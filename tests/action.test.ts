@@ -131,6 +131,33 @@ describe("Action", () => {
       });
     });
 
+    describe("when actionFn fails", () => {
+      const errorReturningAction = new Action()
+        .setInputSchema(nameInputSchema)
+        .addValidator(async ({ params, context }) =>
+          zodValidator(context.inputSchema, params),
+        )
+        .setActionFn<never, { businessError: { reason: string } }>(
+          async () => ({
+            success: false,
+            message: "Business rule failed",
+            errorCode: "businessError",
+            errorPayload: { reason: "Not allowed to perform this action" },
+          }),
+        );
+
+      it("returns errorCode and errorPayload from actionFn", async () => {
+        const result = await errorReturningAction({ name: "Valid" });
+
+        expect(result.success).toBe(false);
+        expect(result.errorCode).toBe("businessError");
+        expect(result.errorPayload).toEqual({
+          reason: "Not allowed to perform this action",
+        });
+        expect(result.message).toBe("Business rule failed");
+      });
+    });
+
     describe("when a validator fails", () => {
       describe("returns error with correct code and payload", () => {
         type PayloadType =
