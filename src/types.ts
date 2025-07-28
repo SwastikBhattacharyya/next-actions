@@ -15,12 +15,15 @@ export type ActionResult<
           message: string;
           payload: SuccessPayload;
         })
-  | {
+  | ({
       success: false;
       message: string;
-      errorCode: keyof ErrorMap;
-      errorPayload: ErrorMap[keyof ErrorMap];
-    };
+    } & {
+      [K in keyof ErrorMap]: {
+        errorCode: K;
+        errorPayload: ErrorMap[K];
+      };
+    }[keyof ErrorMap]);
 
 export type ActionResultSuccess<SuccessPayload extends void | object> = Promise<
   ActionResult<SuccessPayload, void>

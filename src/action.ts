@@ -41,7 +41,7 @@ export class Action<
     >,
   ) {
     (
-      this.validators as ValidationHandler<
+      this.validators as unknown as ValidationHandler<
         InputSchema,
         Context,
         OutputContext,
@@ -51,8 +51,8 @@ export class Action<
     return this as unknown as Action<
       InputSchema,
       Output,
-      Context & OutputContext,
-      ErrorMap & OutputErrorMap
+      Context & (OutputContext extends void ? object : OutputContext),
+      ErrorMap & (OutputErrorMap extends void ? object : OutputErrorMap)
     >;
   }
 
