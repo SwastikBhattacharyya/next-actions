@@ -1,6 +1,6 @@
 {
   "name": "@swastikbhattacharyya/next-actions",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "A type-safe utility for defining server actions and backend data access layers.",
   "type": "module",
   "homepage": "https://github.com/SwastikBhattacharyya/next-actions#readme",
