@@ -42,29 +42,28 @@ export type ActionResult<
     }[keyof ErrorMap]);
 
 /**
- * A shortcut type for a Promise of {@link ActionResult} that returns no
- * payload but may return errors.
+ * A shortcut type for a {@link ActionResult} that returns no payload but may
+ * return errors.
  *
  * @template ErrorMap - A map where each key is an error code, and the
  * corresponding value is the payload associated with that specific error.
  */
 export type ActionResultWithoutPayload<ErrorMap extends void | object> =
-  Promise<ActionResult<void, ErrorMap>>;
+  ActionResult<void, ErrorMap>;
 
 /**
- * A shortcut type for a Promise of {@link ActionResult} that returns a
- * payload but no errors.
+ * A shortcut type for a {@link ActionResult} that returns a payload but no
+ * errors.
  *
  * @template SuccessPayload - The payload to return.
  */
 export type ActionResultWithoutError<SuccessPayload extends void | object> =
-  Promise<ActionResult<SuccessPayload, void>>;
+  ActionResult<SuccessPayload, void>;
 
 /**
- * A shortcut type for a Promise of generic {@link ActionResult} (no payload or
- * errors).
+ * A shortcut type for a generic {@link ActionResult} (no payload or errors).
  */
-export type ActionResultAny = Promise<ActionResult<void, void>>;
+export type ActionResultAny = ActionResult<void, void>;
 
 /**
  * Represents the result of a validation step.
@@ -102,30 +101,30 @@ export type ValidationResult<
         });
 
 /**
- * A shortcut type for a Promise of {@link ValidationResult} that does not
- * inject additional context but may return errors.
+ * A shortcut type for a {@link ValidationResult} that does not inject
+ * additional context but may return errors.
  *
  * @template ErrorMap - A map where each key is an error code, and the
  * corresponding value is the payload associated with that specific error.
  */
 export type ValidationResultWithoutContext<ErrorMap extends void | object> =
-  Promise<ValidationResult<void, ErrorMap>>;
+  ValidationResult<void, ErrorMap>;
 
 /**
- * A shortcut type for a Promise of {@link ValidationResult} that injects
- * additional context but does not return errors.
+ * A shortcut type for {@link ValidationResult} that injects additional context
+ * but does not return errors.
  *
  * @template OutputContext - Additional context injected into execution on
  * success.
  */
 export type ValidationResultWithoutError<OutputContext extends void | object> =
-  Promise<ValidationResult<OutputContext, void>>;
+  ValidationResult<OutputContext, void>;
 
 /**
- * A shortcut type for a Promise of generic {@link ValidationResult} (no
- * injected context or errors).
+ * A shortcut type for a generic {@link ValidationResult} (no injected context
+ * or errors).
  */
-export type ValidationResultAny = Promise<ValidationResult<void, void>>;
+export type ValidationResultAny = ValidationResult<void, void>;
 
 /**
  * Function that performs the main action after all validators have succeeded.

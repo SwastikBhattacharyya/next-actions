@@ -18,9 +18,11 @@ import { ValidationResultWithoutContext } from "../types";
 export async function zodValidator<Schema extends $ZodType>(
   schema: Schema,
   params: z.infer<Schema>,
-): ValidationResultWithoutContext<{
-  zodValidator_invalidParams: { issues: $ZodIssue[] };
-}> {
+): Promise<
+  ValidationResultWithoutContext<{
+    zodValidator_invalidParams: { issues: $ZodIssue[] };
+  }>
+> {
   const result = safeParse(schema, params);
   if (!result.success)
     return {
