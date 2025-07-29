@@ -1,6 +1,6 @@
 {
   "name": "next-actions",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A type-safe utility for defining server actions and backend data access layers.",
   "type": "module",
   "exports": {
@@ -18,8 +18,18 @@
     "test": "jest",
     "docs": "typedoc src"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "next",
+    "nextjs",
+    "server actions",
+    "next actions",
+    "validated action",
+    "action validation",
+    "server actions",
+    "validated server actions",
+    "next server actions"
+  ],
+  "author": "Swastik Bhattacharyya",
   "license": "ISC",
   "packageManager": "pnpm@10.13.1",
   "devDependencies": {
