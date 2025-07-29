@@ -1,0 +1,345 @@
+<!DOCTYPE html><html class="default" lang="en" data-base="./"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>next-actions - v0.3.0</title><meta name="description" content="Documentation for next-actions"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script><style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --md-sys-color-primary: #f6be46;
+    --md-sys-color-on-primary: #412d00;
+    --md-sys-color-primary-container: #5d4200;
+    --md-sys-color-on-primary-container: #ffdea3;
+    --md-sys-color-secondary: #d9c4a0;
+    --md-sys-color-on-secondary: #3b2f15;
+    --md-sys-color-secondary-container: #53452a;
+    --md-sys-color-on-secondary-container: #f6e0bb;
+    --md-sys-color-tertiary: #b2cfa8;
+    --md-sys-color-on-tertiary: #1e361a;
+    --md-sys-color-tertiary-container: #344d2f;
+    --md-sys-color-on-tertiary-container: #cdebc2;
+    --md-sys-color-error: #ffb4ab;
+    --md-sys-color-on-error: #690005;
+    --md-sys-color-error-container: #93000a;
+    --md-sys-color-on-error-container: #ffb4ab;
+    --md-sys-color-background: #1e1b16;
+    --md-sys-color-on-background: #e9e1d9;
+    --md-sys-color-surface: #1e1b16;
+    --md-sys-color-on-surface: #e9e1d9;
+    --md-sys-color-surface-variant: #4e4639;
+    --md-sys-color-on-surface-variant: #d1c5b4;
+    --md-sys-color-outline: #9a8f80;
+    --md-sys-color-outline-variant: #4e4639;
+    --md-sys-color-shadow: #000000;
+    --md-sys-color-scrim: #000000;
+    --md-sys-color-inverse-surface: #e9e1d9;
+    --md-sys-color-inverse-on-surface: #34302a;
+    --md-sys-color-inverse-primary: #7a5900;
+    --md-sys-color-surface-dim: #16130e;
+    --md-sys-color-surface-bright: #3d3933;
+    --md-sys-color-surface-container-lowest: #110e09;
+    --md-sys-color-surface-container-low: #1e1b16;
+    --md-sys-color-surface-container: #221f1a;
+    --md-sys-color-surface-container-high: #2d2924;
+    --md-sys-color-surface-container-highest: #38342e
+  }
+}
+:root[data-theme="dark"] {
+  --md-sys-color-primary: #f6be46;
+  --md-sys-color-on-primary: #412d00;
+  --md-sys-color-primary-container: #5d4200;
+  --md-sys-color-on-primary-container: #ffdea3;
+  --md-sys-color-secondary: #d9c4a0;
+  --md-sys-color-on-secondary: #3b2f15;
+  --md-sys-color-secondary-container: #53452a;
+  --md-sys-color-on-secondary-container: #f6e0bb;
+  --md-sys-color-tertiary: #b2cfa8;
+  --md-sys-color-on-tertiary: #1e361a;
+  --md-sys-color-tertiary-container: #344d2f;
+  --md-sys-color-on-tertiary-container: #cdebc2;
+  --md-sys-color-error: #ffb4ab;
+  --md-sys-color-on-error: #690005;
+  --md-sys-color-error-container: #93000a;
+  --md-sys-color-on-error-container: #ffb4ab;
+  --md-sys-color-background: #1e1b16;
+  --md-sys-color-on-background: #e9e1d9;
+  --md-sys-color-surface: #1e1b16;
+  --md-sys-color-on-surface: #e9e1d9;
+  --md-sys-color-surface-variant: #4e4639;
+  --md-sys-color-on-surface-variant: #d1c5b4;
+  --md-sys-color-outline: #9a8f80;
+  --md-sys-color-outline-variant: #4e4639;
+  --md-sys-color-shadow: #000000;
+  --md-sys-color-scrim: #000000;
+  --md-sys-color-inverse-surface: #e9e1d9;
+  --md-sys-color-inverse-on-surface: #34302a;
+  --md-sys-color-inverse-primary: #7a5900;
+  --md-sys-color-surface-dim: #16130e;
+  --md-sys-color-surface-bright: #3d3933;
+  --md-sys-color-surface-container-lowest: #110e09;
+  --md-sys-color-surface-container-low: #1e1b16;
+  --md-sys-color-surface-container: #221f1a;
+  --md-sys-color-surface-container-high: #2d2924;
+  --md-sys-color-surface-container-highest: #38342e
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --md-sys-color-primary: #7a5900;
+    --md-sys-color-on-primary: #ffffff;
+    --md-sys-color-primary-container: #ffdea3;
+    --md-sys-color-on-primary-container: #261900;
+    --md-sys-color-secondary: #6c5c3f;
+    --md-sys-color-on-secondary: #ffffff;
+    --md-sys-color-secondary-container: #f6e0bb;
+    --md-sys-color-on-secondary-container: #251a04;
+    --md-sys-color-tertiary: #4b6545;
+    --md-sys-color-on-tertiary: #ffffff;
+    --md-sys-color-tertiary-container: #cdebc2;
+    --md-sys-color-on-tertiary-container: #092007;
+    --md-sys-color-error: #ba1a1a;
+    --md-sys-color-on-error: #ffffff;
+    --md-sys-color-error-container: #ffdad6;
+    --md-sys-color-on-error-container: #410002;
+    --md-sys-color-background: #fffbff;
+    --md-sys-color-on-background: #1e1b16;
+    --md-sys-color-surface: #fffbff;
+    --md-sys-color-on-surface: #1e1b16;
+    --md-sys-color-surface-variant: #ede1cf;
+    --md-sys-color-on-surface-variant: #4e4639;
+    --md-sys-color-outline: #7f7667;
+    --md-sys-color-outline-variant: #d1c5b4;
+    --md-sys-color-shadow: #000000;
+    --md-sys-color-scrim: #000000;
+    --md-sys-color-inverse-surface: #34302a;
+    --md-sys-color-inverse-on-surface: #f8efe7;
+    --md-sys-color-inverse-primary: #f6be46;
+    --md-sys-color-surface-dim: #e1d9d0;
+    --md-sys-color-surface-bright: #fff8f2;
+    --md-sys-color-surface-container-lowest: #ffffff;
+    --md-sys-color-surface-container-low: #fbf2e9;
+    --md-sys-color-surface-container: #f5ede4;
+    --md-sys-color-surface-container-high: #efe7de;
+    --md-sys-color-surface-container-highest: #e9e1d9
+  }
+}
+:root[data-theme="light"] {
+  --md-sys-color-primary: #7a5900;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #ffdea3;
+  --md-sys-color-on-primary-container: #261900;
+  --md-sys-color-secondary: #6c5c3f;
+  --md-sys-color-on-secondary: #ffffff;
+  --md-sys-color-secondary-container: #f6e0bb;
+  --md-sys-color-on-secondary-container: #251a04;
+  --md-sys-color-tertiary: #4b6545;
+  --md-sys-color-on-tertiary: #ffffff;
+  --md-sys-color-tertiary-container: #cdebc2;
+  --md-sys-color-on-tertiary-container: #092007;
+  --md-sys-color-error: #ba1a1a;
+  --md-sys-color-on-error: #ffffff;
+  --md-sys-color-error-container: #ffdad6;
+  --md-sys-color-on-error-container: #410002;
+  --md-sys-color-background: #fffbff;
+  --md-sys-color-on-background: #1e1b16;
+  --md-sys-color-surface: #fffbff;
+  --md-sys-color-on-surface: #1e1b16;
+  --md-sys-color-surface-variant: #ede1cf;
+  --md-sys-color-on-surface-variant: #4e4639;
+  --md-sys-color-outline: #7f7667;
+  --md-sys-color-outline-variant: #d1c5b4;
+  --md-sys-color-shadow: #000000;
+  --md-sys-color-scrim: #000000;
+  --md-sys-color-inverse-surface: #34302a;
+  --md-sys-color-inverse-on-surface: #f8efe7;
+  --md-sys-color-inverse-primary: #f6be46;
+  --md-sys-color-surface-dim: #e1d9d0;
+  --md-sys-color-surface-bright: #fff8f2;
+  --md-sys-color-surface-container-lowest: #ffffff;
+  --md-sys-color-surface-container-low: #fbf2e9;
+  --md-sys-color-surface-container: #f5ede4;
+  --md-sys-color-surface-container-high: #efe7de;
+  --md-sys-color-surface-container-highest: #e9e1d9
+}
+</style><link rel="stylesheet" href="assets/material-style.css"/></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><a href="index.html" class="title">next-actions - v0.3.0</a><div id="tsd-toolbar-links"></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/><ul role="listbox" id="tsd-search-results"></ul><div id="tsd-search-status" aria-live="polite" aria-atomic="true"><div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h1>next-actions - v0.3.0</h1></div><div class="tsd-panel tsd-typography"><h1 id="next-actions" class="tsd-anchor-link">Next Actions<a href="#next-actions" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><p>Next Actions is a utility library for defining type-safe server actions and
+data access layers.</p>
+<h2 id="what-is-next-actions" class="tsd-anchor-link">What is Next Actions?<a href="#what-is-next-actions" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>Next Actions is a lightweight and simple TypeScript utility library for
+building type-safe, validated server actions and data access layers using zod
+along with clearly defined and structured error responses.</p>
+<p>Define an input schema with Zod, add layered validation functions that return
+typed error codes with payloads, or context to be used later in the action
+execution. The action itself can also return typed errors or a success payload.
+Execution gives you a strongly typed result—success or failure, with full type
+safety.</p>
+<pre><code class="typescript"><span class="hl-0">export</span><span class="hl-1"> </span><span class="hl-2">const</span><span class="hl-1"> </span><span class="hl-3">action</span><span class="hl-1"> = </span><span class="hl-2">new</span><span class="hl-1"> </span><span class="hl-4">Action</span><span class="hl-1">()</span><br/><span class="hl-1">  .</span><span class="hl-4">setInputSchema</span><span class="hl-1">(</span><br/><span class="hl-1">    </span><span class="hl-5">z</span><span class="hl-1">.</span><span class="hl-4">object</span><span class="hl-1">({</span><br/><span class="hl-1">      </span><span class="hl-5">id:</span><span class="hl-1"> </span><span class="hl-5">z</span><span class="hl-1">.</span><span class="hl-4">string</span><span class="hl-1">(),</span><br/><span class="hl-1">      </span><span class="hl-5">name:</span><span class="hl-1"> </span><span class="hl-5">z</span><span class="hl-1">.</span><span class="hl-4">string</span><span class="hl-1">().</span><span class="hl-4">min</span><span class="hl-1">(</span><span class="hl-6">2</span><span class="hl-1">),</span><br/><span class="hl-1">    }),</span><br/><span class="hl-1">  )</span><br/><span class="hl-1">  .</span><span class="hl-4">addValidator</span><span class="hl-1">(</span><br/><span class="hl-1">    </span><span class="hl-2">async</span><span class="hl-1"> ({ </span><span class="hl-5">context</span><span class="hl-1">: { </span><span class="hl-5">inputSchema</span><span class="hl-1"> }, </span><span class="hl-5">params</span><span class="hl-1"> }) </span><span class="hl-2">=&gt;</span><br/><span class="hl-1">      </span><span class="hl-4">zodValidator</span><span class="hl-1">(</span><span class="hl-5">inputSchema</span><span class="hl-1">, </span><span class="hl-5">params</span><span class="hl-1">), </span><span class="hl-7">// Validator to safely parse arguments by client/form</span><br/><span class="hl-1">  )</span><br/><span class="hl-1">  .</span><span class="hl-4">setActionFn</span><span class="hl-1">(</span><span class="hl-2">async</span><span class="hl-1"> () </span><span class="hl-2">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-7">// Your Server Action</span><br/><span class="hl-1">    </span><span class="hl-7">// ...</span><br/><span class="hl-1">    </span><span class="hl-0">return</span><span class="hl-1"> { </span><span class="hl-5">success:</span><span class="hl-1"> </span><span class="hl-2">true</span><span class="hl-1">, </span><span class="hl-5">message:</span><span class="hl-1"> </span><span class="hl-8">&quot;Action successful&quot;</span><span class="hl-1"> };</span><br/><span class="hl-1">  });</span>
+</code><button type="button">Copy</button></pre>
+
+<h2 id="usage-guide" class="tsd-anchor-link">Usage Guide<a href="#usage-guide" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>The following example demonstrates how to create a server action with input
+validation with zod, user session validation and user role check. Assume the
+action inserts a blog post into the database.</p>
+<h3 id="1-define-input-schema" class="tsd-anchor-link">1. Define input schema<a href="#1-define-input-schema" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><p>This schema defines the parameters of the server action.</p>
+<blockquote>
+<p><strong>Note: Schema validation is not automatic. You must use the <code>zodValidator</code>
+utility from the library, or define your own custom Zod Validator. This
+example will use <code>zodValidator</code> for input validation.</strong></p>
+</blockquote>
+<pre><code class="typescript"><span class="hl-2">const</span><span class="hl-1"> </span><span class="hl-3">postSchema</span><span class="hl-1"> = </span><span class="hl-5">z</span><span class="hl-1">.</span><span class="hl-4">object</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-5">title:</span><span class="hl-1"> </span><span class="hl-5">z</span><span class="hl-1">.</span><span class="hl-4">string</span><span class="hl-1">(),</span><br/><span class="hl-1">  </span><span class="hl-5">description:</span><span class="hl-1"> </span><span class="hl-5">z</span><span class="hl-1">.</span><span class="hl-4">string</span><span class="hl-1">(),</span><br/><span class="hl-1">  </span><span class="hl-5">content:</span><span class="hl-1"> </span><span class="hl-5">z</span><span class="hl-1">.</span><span class="hl-4">string</span><span class="hl-1">(),</span><br/><span class="hl-1">});</span>
+</code><button type="button">Copy</button></pre>
+
+<h3 id="2-define-validators-for-user-session--role" class="tsd-anchor-link">2. Define Validators for User Session &amp; Role<a href="#2-define-validators-for-user-session--role" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><h4 id="what-are-validators" class="tsd-anchor-link">What are Validators?<a href="#what-are-validators" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4><p>Before we define the validator, let us know what a Validator actually is.
+<strong>Validators</strong> are just functions used to enforce rules before the action
+executes. The function must return a <code>Promise</code> of a <code>ValidationResult</code>. It can
+accept their own parameters and perform any logic needed.</p>
+<p>The <code>ValidationResult</code> type accepts two type arguments:</p>
+<ol>
+<li><strong>Injected Context</strong>: Data that will be made available to all subsequent
+validators and the action function if the validation succeeds. For example:
+the user session validator will inject the user id into the execution so
+that the action can later pass the user id to the query to insert into the
+database.</li>
+<li><strong>Possible Errors</strong>: An object containing all the error codes the validator
+might return, along with their associated payloads. It helps to distinguish
+which validator actually failed and what error occured. You can handle each
+failure case accordingly.</li>
+</ol>
+<blockquote>
+<p><strong>Note</strong>: You can use shortcut types like <code>ValidationResultWithoutContext</code>,
+<code>ValidationResultWithoutError</code>, or <code>ValidationResultAny</code> if your validator
+doesn't inject context, doesn't return errors, or neither.</p>
+</blockquote>
+<h4 id="21-user-session-validator" class="tsd-anchor-link">2.1 User Session Validator<a href="#21-user-session-validator" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4><p>This validator will inject the user id into the context and can return an error
+code <code>userSessionValidator_noSession</code> if not session was found and a string
+containing a message as payload for that error code (as an example, you can
+return any payload that might help with error handling).</p>
+<pre><code class="typescript"><span class="hl-2">async</span><span class="hl-1"> </span><span class="hl-2">function</span><span class="hl-1"> </span><span class="hl-4">userSessionValidator</span><span class="hl-1">(): </span><span class="hl-9">Promise</span><span class="hl-1">&lt;</span><br/><span class="hl-1">  </span><span class="hl-9">ValidationResult</span><span class="hl-1">&lt;</span><br/><span class="hl-1">    { </span><span class="hl-5">userId</span><span class="hl-1">: </span><span class="hl-9">string</span><span class="hl-1"> },</span><br/><span class="hl-1">    { </span><span class="hl-5">userSessionValidator_noSession</span><span class="hl-1">: { </span><span class="hl-5">message</span><span class="hl-1">: </span><span class="hl-9">string</span><span class="hl-1"> } }</span><br/><span class="hl-1">  &gt;</span><br/><span class="hl-1">&gt; {</span><br/><span class="hl-1">  </span><span class="hl-2">const</span><span class="hl-1"> </span><span class="hl-3">cookieStore</span><span class="hl-1"> = </span><span class="hl-0">await</span><span class="hl-1"> </span><span class="hl-4">cookies</span><span class="hl-1">();</span><br/><br/><span class="hl-1">  </span><span class="hl-0">if</span><span class="hl-1"> (!</span><span class="hl-5">cookieStore</span><span class="hl-1">.</span><span class="hl-4">has</span><span class="hl-1">(</span><span class="hl-8">&quot;userSession&quot;</span><span class="hl-1">))</span><br/><span class="hl-1">    </span><span class="hl-0">return</span><span class="hl-1"> {</span><br/><span class="hl-1">      </span><span class="hl-5">ok:</span><span class="hl-1"> </span><span class="hl-2">false</span><span class="hl-1">,</span><br/><span class="hl-1">      </span><span class="hl-5">errorCode:</span><span class="hl-1"> </span><span class="hl-8">&quot;userSessionValidator_noSession&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">      </span><span class="hl-5">payload:</span><span class="hl-1"> { </span><span class="hl-5">message:</span><span class="hl-1"> </span><span class="hl-8">&quot;User session not found in cookies&quot;</span><span class="hl-1"> },</span><br/><span class="hl-1">    };</span><br/><br/><span class="hl-1">  </span><span class="hl-2">const</span><span class="hl-1"> </span><span class="hl-3">userId</span><span class="hl-1"> = </span><span class="hl-5">cookieStore</span><span class="hl-1">.</span><span class="hl-4">get</span><span class="hl-1">(</span><span class="hl-8">&quot;userSession&quot;</span><span class="hl-1">)?.</span><span class="hl-5">value</span><span class="hl-1"> </span><span class="hl-0">as</span><span class="hl-1"> </span><span class="hl-9">string</span><span class="hl-1">;</span><br/><span class="hl-1">  </span><span class="hl-0">return</span><span class="hl-1"> { </span><span class="hl-5">ok:</span><span class="hl-1"> </span><span class="hl-2">true</span><span class="hl-1">, </span><span class="hl-5">context:</span><span class="hl-1"> { </span><span class="hl-5">userId</span><span class="hl-1"> } };</span><br/><span class="hl-1">}</span>
+</code><button type="button">Copy</button></pre>
+
+<h4 id="22-user-role-validator" class="tsd-anchor-link">2.2 User Role Validator<a href="#22-user-role-validator" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4><p>This validator will inject the user role into the context and can return two
+errors: <code>userRoleValidator_roleNotFound</code> and
+<code>userRoleValidator_insufficientPermissions</code>, but with no payload.</p>
+<pre><code class="typescript"><span class="hl-2">async</span><span class="hl-1"> </span><span class="hl-2">function</span><span class="hl-1"> </span><span class="hl-4">userRoleValidator</span><span class="hl-1">(</span><span class="hl-5">userId</span><span class="hl-1">: </span><span class="hl-9">string</span><span class="hl-1">): </span><span class="hl-9">Promise</span><span class="hl-1">&lt;</span><br/><span class="hl-1">  </span><span class="hl-9">ValidationResult</span><span class="hl-1">&lt;</span><br/><span class="hl-1">    { </span><span class="hl-5">role</span><span class="hl-1">: </span><span class="hl-8">&quot;admin&quot;</span><span class="hl-1"> | </span><span class="hl-8">&quot;editor&quot;</span><span class="hl-1"> },</span><br/><span class="hl-1">    {</span><br/><span class="hl-1">      </span><span class="hl-5">userRoleValidator_roleNotFound</span><span class="hl-1">: </span><span class="hl-9">null</span><span class="hl-1">;</span><br/><span class="hl-1">      </span><span class="hl-5">userRoleValidator_insufficientPermissions</span><span class="hl-1">: </span><span class="hl-9">null</span><span class="hl-1">;</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">  &gt;</span><br/><span class="hl-1">&gt; {</span><br/><span class="hl-1">  </span><span class="hl-2">const</span><span class="hl-1"> </span><span class="hl-3">role</span><span class="hl-1"> = </span><span class="hl-0">await</span><span class="hl-1"> </span><span class="hl-4">getUserRole</span><span class="hl-1">(</span><span class="hl-5">userId</span><span class="hl-1">); </span><span class="hl-7">// Assume this fetches from DB or session</span><br/><br/><span class="hl-1">  </span><span class="hl-0">if</span><span class="hl-1"> (!</span><span class="hl-5">role</span><span class="hl-1">) {</span><br/><span class="hl-1">    </span><span class="hl-0">return</span><span class="hl-1"> {</span><br/><span class="hl-1">      </span><span class="hl-5">ok:</span><span class="hl-1"> </span><span class="hl-2">false</span><span class="hl-1">,</span><br/><span class="hl-1">      </span><span class="hl-5">errorCode:</span><span class="hl-1"> </span><span class="hl-8">&quot;userRoleValidator_roleNotFound&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">      </span><span class="hl-5">payload:</span><span class="hl-1"> </span><span class="hl-2">null</span><span class="hl-1">,</span><br/><span class="hl-1">    };</span><br/><span class="hl-1">  }</span><br/><br/><span class="hl-1">  </span><span class="hl-0">if</span><span class="hl-1"> (</span><span class="hl-5">role</span><span class="hl-1"> !== </span><span class="hl-8">&quot;admin&quot;</span><span class="hl-1">) {</span><br/><span class="hl-1">    </span><span class="hl-0">return</span><span class="hl-1"> {</span><br/><span class="hl-1">      </span><span class="hl-5">ok:</span><span class="hl-1"> </span><span class="hl-2">false</span><span class="hl-1">,</span><br/><span class="hl-1">      </span><span class="hl-5">errorCode:</span><span class="hl-1"> </span><span class="hl-8">&quot;userRoleValidator_insufficientPermissions&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">      </span><span class="hl-5">payload:</span><span class="hl-1"> </span><span class="hl-2">null</span><span class="hl-1">,</span><br/><span class="hl-1">    };</span><br/><span class="hl-1">  }</span><br/><br/><span class="hl-1">  </span><span class="hl-0">return</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-5">ok:</span><span class="hl-1"> </span><span class="hl-2">true</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-5">context:</span><span class="hl-1"> { </span><span class="hl-5">role</span><span class="hl-1"> },</span><br/><span class="hl-1">  };</span><br/><span class="hl-1">}</span>
+</code><button type="button">Copy</button></pre>
+
+<h3 id="3-build-the-action-with-validators" class="tsd-anchor-link">3. Build the action with validators<a href="#3-build-the-action-with-validators" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><p>The Action class uses the builder pattern to compose a server action step by
+step using the chainable methods <code>.setInputSchema()</code>, <code>.addValidator()</code>, and
+<code>.setActionFn()</code>.</p>
+<blockquote>
+<p><strong>Note</strong>: If using Next.js, both <code>.addValidator()</code> and <code>.setActionFn()</code> must
+receive async functions, since server functions must always be asynchronous.</p>
+</blockquote>
+<pre><code class="typescript"><span class="hl-0">export</span><span class="hl-1"> </span><span class="hl-2">const</span><span class="hl-1"> </span><span class="hl-3">action</span><span class="hl-1"> = </span><span class="hl-2">new</span><span class="hl-1"> </span><span class="hl-4">Action</span><span class="hl-1">()</span><br/><span class="hl-1">  .</span><span class="hl-4">setInputSchema</span><span class="hl-1">(</span><span class="hl-5">postSchema</span><span class="hl-1">) </span><span class="hl-7">// injects schema instance into context</span><br/><span class="hl-1">  .</span><span class="hl-4">addValidator</span><span class="hl-1">(</span><span class="hl-2">async</span><span class="hl-1"> ({ </span><span class="hl-5">context</span><span class="hl-1">: { </span><span class="hl-5">inputSchema</span><span class="hl-1"> }, </span><span class="hl-5">params</span><span class="hl-1"> }) </span><span class="hl-2">=&gt;</span><br/><span class="hl-1">    </span><span class="hl-4">zodValidator</span><span class="hl-1">(</span><span class="hl-5">inputSchema</span><span class="hl-1">, </span><span class="hl-5">params</span><span class="hl-1">),</span><br/><span class="hl-1">  )</span><br/><span class="hl-1">  .</span><span class="hl-4">addValidator</span><span class="hl-1">(</span><span class="hl-2">async</span><span class="hl-1"> () </span><span class="hl-2">=&gt;</span><span class="hl-1"> </span><span class="hl-4">userSessionValidator</span><span class="hl-1">()) </span><span class="hl-7">// injects userId into context</span><br/><span class="hl-1">  .</span><span class="hl-4">addValidator</span><span class="hl-1">(</span><span class="hl-2">async</span><span class="hl-1"> () </span><span class="hl-2">=&gt;</span><span class="hl-1"> </span><span class="hl-4">userRoleValidator</span><span class="hl-1">()) </span><span class="hl-7">// injects role into context</span><br/><span class="hl-1">  .</span><span class="hl-4">setActionFn</span><span class="hl-1">(</span><span class="hl-2">async</span><span class="hl-1"> ({ </span><span class="hl-5">context</span><span class="hl-1">, </span><span class="hl-5">params</span><span class="hl-1"> }) </span><span class="hl-2">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-7">// You can now access context.userId, context.role and the validated input in params</span><br/><span class="hl-1">    </span><span class="hl-7">// context also contains the input schema instance if needed. It is injected by .setInputSchema()</span><br/><span class="hl-1">    </span><span class="hl-0">return</span><span class="hl-1"> { </span><span class="hl-5">success:</span><span class="hl-1"> </span><span class="hl-2">true</span><span class="hl-1">, </span><span class="hl-5">message:</span><span class="hl-1"> </span><span class="hl-8">&quot;Successfully executed&quot;</span><span class="hl-1"> };</span><br/><span class="hl-1">  });</span>
+</code><button type="button">Copy</button></pre>
+
+<h3 id="4-define-the-server-action" class="tsd-anchor-link">4. Define the server action<a href="#4-define-the-server-action" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><p>You can now define the actual server action to perform after the validation
+steps are successful.</p>
+<pre><code class="typescript"><span class="hl-0">export</span><span class="hl-1"> </span><span class="hl-2">const</span><span class="hl-1"> </span><span class="hl-3">action</span><span class="hl-1"> = </span><span class="hl-2">new</span><span class="hl-1"> </span><span class="hl-4">Action</span><span class="hl-1">()</span><br/><span class="hl-1">  .</span><span class="hl-4">setInputSchema</span><span class="hl-1">(</span><span class="hl-5">postSchema</span><span class="hl-1">)</span><br/><span class="hl-1">  .</span><span class="hl-4">addValidator</span><span class="hl-1">(</span><span class="hl-2">async</span><span class="hl-1"> ({ </span><span class="hl-5">context</span><span class="hl-1">: { </span><span class="hl-5">inputSchema</span><span class="hl-1"> }, </span><span class="hl-5">params</span><span class="hl-1"> }) </span><span class="hl-2">=&gt;</span><br/><span class="hl-1">    </span><span class="hl-4">zodValidator</span><span class="hl-1">(</span><span class="hl-5">inputSchema</span><span class="hl-1">, </span><span class="hl-5">params</span><span class="hl-1">),</span><br/><span class="hl-1">  )</span><br/><span class="hl-1">  .</span><span class="hl-4">addValidator</span><span class="hl-1">(</span><span class="hl-2">async</span><span class="hl-1"> () </span><span class="hl-2">=&gt;</span><span class="hl-1"> </span><span class="hl-4">userSessionValidator</span><span class="hl-1">())</span><br/><span class="hl-1">  .</span><span class="hl-4">addValidator</span><span class="hl-1">(</span><span class="hl-2">async</span><span class="hl-1"> () </span><span class="hl-2">=&gt;</span><span class="hl-1"> </span><span class="hl-4">userRoleValidator</span><span class="hl-1">())</span><br/><span class="hl-1">  .</span><span class="hl-4">setActionFn</span><span class="hl-1">(</span><span class="hl-2">async</span><span class="hl-1"> ({ </span><span class="hl-5">context</span><span class="hl-1">, </span><span class="hl-5">params</span><span class="hl-1"> }) </span><span class="hl-2">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-2">const</span><span class="hl-1"> { </span><span class="hl-3">userId</span><span class="hl-1"> } = </span><span class="hl-5">context</span><span class="hl-1">;</span><br/><span class="hl-1">    </span><span class="hl-2">const</span><span class="hl-1"> { </span><span class="hl-3">title</span><span class="hl-1">, </span><span class="hl-3">description</span><span class="hl-1">, </span><span class="hl-3">content</span><span class="hl-1"> } = </span><span class="hl-5">params</span><span class="hl-1">;</span><br/><br/><span class="hl-1">    </span><span class="hl-0">await</span><span class="hl-1"> </span><span class="hl-5">db</span><span class="hl-1">.</span><span class="hl-4">query</span><span class="hl-1">(</span><br/><span class="hl-1">      </span><span class="hl-8">`INSERT INTO posts (user_id, title, description, content)</span><br/><span class="hl-8">       VALUES (?, ?, ?, ?)`</span><span class="hl-1">,</span><br/><span class="hl-1">      [</span><span class="hl-5">userId</span><span class="hl-1">, </span><span class="hl-5">title</span><span class="hl-1">, </span><span class="hl-5">description</span><span class="hl-1">, </span><span class="hl-5">content</span><span class="hl-1">],</span><br/><span class="hl-1">    );</span><br/><br/><span class="hl-1">    </span><span class="hl-0">return</span><span class="hl-1"> { </span><span class="hl-5">success:</span><span class="hl-1"> </span><span class="hl-2">true</span><span class="hl-1">, </span><span class="hl-5">message:</span><span class="hl-1"> </span><span class="hl-8">&quot;Post created successfully&quot;</span><span class="hl-1"> };</span><br/><span class="hl-1">  });</span>
+</code><button type="button">Copy</button></pre>
+
+<h4 id="action-functions-are-just-like-validators" class="tsd-anchor-link">Action Functions are Just Like Validators!<a href="#action-functions-are-just-like-validators" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4><p>An action is conceptually similar to a validator — it returns a type called
+<code>ActionResult</code>, which is structurally the same as <code>ValidationResult</code>. That
+means an action can either:</p>
+<ul>
+<li>
+<p>Succeed, and optionally return a success payload (e.g. { id: string })</p>
+</li>
+<li>
+<p>Fail, and return a structured error with a code and optional payload
+You can define the types for success and error codes using <code>.setActionFn&lt;SuccessPayload, ErrorMap&gt;()</code>.</p>
+<pre><code class="typescript"><span class="hl-1">.</span><span class="hl-4">setActionFn</span><span class="hl-1">&lt;{ </span><span class="hl-5">postId</span><span class="hl-1">: </span><span class="hl-9">string</span><span class="hl-1"> }, { </span><span class="hl-5">dbError</span><span class="hl-1">: { </span><span class="hl-5">reason</span><span class="hl-1">: </span><span class="hl-9">string</span><span class="hl-1"> } }&gt;(</span><br/><span class="hl-1">  </span><span class="hl-2">async</span><span class="hl-1"> ({ </span><span class="hl-5">context</span><span class="hl-1">, </span><span class="hl-5">params</span><span class="hl-1"> }) </span><span class="hl-2">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-7">// If Error case</span><br/><span class="hl-1">    </span><span class="hl-0">return</span><span class="hl-1"> {</span><br/><span class="hl-1">      </span><span class="hl-5">success:</span><span class="hl-1"> </span><span class="hl-2">false</span><span class="hl-1">,</span><br/><span class="hl-1">      </span><span class="hl-5">message:</span><span class="hl-1"> </span><span class="hl-8">&quot;Failed&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">      </span><span class="hl-5">errorCode:</span><span class="hl-1"> </span><span class="hl-8">&quot;dbError&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">      </span><span class="hl-5">errorPayload:</span><span class="hl-1"> { </span><span class="hl-5">reason:</span><span class="hl-1"> </span><span class="hl-8">&quot;Some Reason&quot;</span><span class="hl-1"> },</span><br/><span class="hl-1">    };</span><br/><span class="hl-1">    </span><span class="hl-7">// If success case</span><br/><span class="hl-1">    </span><span class="hl-0">return</span><span class="hl-1"> {</span><br/><span class="hl-1">      </span><span class="hl-5">success:</span><span class="hl-1"> </span><span class="hl-2">true</span><span class="hl-1">,</span><br/><span class="hl-1">      </span><span class="hl-5">message:</span><span class="hl-1"> </span><span class="hl-8">&quot;Successfully executed&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">      </span><span class="hl-5">payload:</span><span class="hl-1"> { </span><span class="hl-5">postId:</span><span class="hl-1"> </span><span class="hl-8">&quot;some Id&quot;</span><span class="hl-1"> },</span><br/><span class="hl-1">    };</span><br/><span class="hl-1">  }</span>
+</code><button type="button">Copy</button></pre>
+
+</li>
+</ul>
+<p>Just like validators, action logic can be extracted into reusable functions.
+Your function should return an <code>ActionResult</code>, and you can use any of the shortcut
+types:</p>
+<ul>
+<li><code>ActionResultWithoutPayload</code> – for actions with no success payload</li>
+<li><code>ActionResultWithoutError</code> – for actions that never fail</li>
+<li><code>ActionResultAny</code> – for actions with no payloads or errors</li>
+</ul>
+<p>For example:</p>
+<pre><code class="typescript"><span class="hl-2">async</span><span class="hl-1"> </span><span class="hl-2">function</span><span class="hl-1"> </span><span class="hl-4">createPost</span><span class="hl-1">(</span><br/><span class="hl-1">  </span><span class="hl-5">userId</span><span class="hl-1">: </span><span class="hl-9">string</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-5">input</span><span class="hl-1">: </span><span class="hl-9">PostInput</span><br/><span class="hl-1">): </span><span class="hl-9">ActionResult</span><span class="hl-1">&lt;{ </span><span class="hl-5">postId</span><span class="hl-1">: </span><span class="hl-9">string</span><span class="hl-1"> }, { </span><span class="hl-5">dbError</span><span class="hl-1">: </span><span class="hl-9">null</span><span class="hl-1"> }&gt; {...}</span>
+</code><button type="button">Copy</button></pre>
+
+<pre><code class="typescript"><span class="hl-1">.</span><span class="hl-4">setActionFn</span><span class="hl-1">(</span><span class="hl-2">async</span><span class="hl-1"> ({</span><span class="hl-5">context</span><span class="hl-1">, </span><span class="hl-5">params</span><span class="hl-1">}) </span><span class="hl-2">=&gt;</span><span class="hl-1"> </span><span class="hl-4">createPost</span><span class="hl-1">(</span><span class="hl-5">context</span><span class="hl-1">.</span><span class="hl-5">userId</span><span class="hl-1">, </span><span class="hl-5">params</span><span class="hl-1">));</span>
+</code><button type="button">Copy</button></pre>
+
+<h4 id="do-you-need-to-write-validator-functions" class="tsd-anchor-link">Do You Need to Write Validator Functions?<a href="#do-you-need-to-write-validator-functions" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4><p>Not always. You don’t need to extract validators into separate functions
+unless you want to reuse them across multiple actions. Validators can be
+written inline directly inside .addValidator(...), and still define their own
+context and error map via the return type:</p>
+<pre><code class="typescript"><span class="hl-1">.</span><span class="hl-4">addValidator</span><span class="hl-1">&lt;{ </span><span class="hl-5">role</span><span class="hl-1">: </span><span class="hl-9">string</span><span class="hl-1"> }, { </span><span class="hl-5">invalidRole</span><span class="hl-1">: </span><span class="hl-9">null</span><span class="hl-1"> }&gt;(</span><span class="hl-2">async</span><span class="hl-1"> (): </span><span class="hl-2">=&gt;</span><span class="hl-1"> {...})</span>
+</code><button type="button">Copy</button></pre>
+
+<h3 id="5-invoking-the-actions-and-handling-errors" class="tsd-anchor-link">5. Invoking the actions and handling errors<a href="#5-invoking-the-actions-and-handling-errors" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><p>You can invoke an action just like any async function by calling it with the
+required input object. The returned result is strongly typed and will indicate
+whether the action succeeded or failed.</p>
+<p>Here’s an example of using the <code>toast.promise</code> pattern (e.g. from
+<code>react-hot-toast</code>) to handle the result with loading, success, and error states
+while taking advantage of the typed error codes and payloads:</p>
+<pre><code class="typescript"><span class="hl-2">const</span><span class="hl-1"> </span><span class="hl-3">promise</span><span class="hl-1"> = </span><span class="hl-4">action</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-5">title:</span><span class="hl-1"> </span><span class="hl-8">&quot;Post Title&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-5">description:</span><span class="hl-1"> </span><span class="hl-8">&quot;Post Description&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-5">content:</span><span class="hl-1"> </span><span class="hl-8">&quot;Post Content&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">});</span><br/><br/><span class="hl-5">toast</span><span class="hl-1">.</span><span class="hl-4">promise</span><span class="hl-1">(</span><br/><span class="hl-1">  </span><span class="hl-2">async</span><span class="hl-1"> () </span><span class="hl-2">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-2">const</span><span class="hl-1"> </span><span class="hl-3">res</span><span class="hl-1"> = </span><span class="hl-0">await</span><span class="hl-1"> </span><span class="hl-5">promise</span><span class="hl-1">;</span><br/><br/><span class="hl-1">    </span><span class="hl-0">if</span><span class="hl-1"> (!</span><span class="hl-5">res</span><span class="hl-1">.</span><span class="hl-5">success</span><span class="hl-1">) {</span><br/><span class="hl-1">      </span><span class="hl-0">switch</span><span class="hl-1"> (</span><span class="hl-5">res</span><span class="hl-1">.</span><span class="hl-5">errorCode</span><span class="hl-1">) {</span><br/><span class="hl-1">        </span><span class="hl-0">case</span><span class="hl-1"> </span><span class="hl-8">&quot;dbError&quot;</span><span class="hl-1">:</span><br/><span class="hl-1">          </span><span class="hl-0">throw</span><span class="hl-1"> </span><span class="hl-2">new</span><span class="hl-1"> </span><span class="hl-4">Error</span><span class="hl-1">(</span><span class="hl-5">res</span><span class="hl-1">.</span><span class="hl-5">errorPayload</span><span class="hl-1">.</span><span class="hl-5">reason</span><span class="hl-1">);</span><br/><span class="hl-1">        </span><span class="hl-0">case</span><span class="hl-1"> </span><span class="hl-8">&quot;zodValidator_invalidParams&quot;</span><span class="hl-1">:</span><br/><span class="hl-1">          </span><span class="hl-0">throw</span><span class="hl-1"> </span><span class="hl-2">new</span><span class="hl-1"> </span><span class="hl-4">Error</span><span class="hl-1">(</span><span class="hl-5">res</span><span class="hl-1">.</span><span class="hl-5">errorPayload</span><span class="hl-1">.</span><span class="hl-5">issues</span><span class="hl-1">[</span><span class="hl-6">0</span><span class="hl-1">].</span><span class="hl-5">message</span><span class="hl-1">);</span><br/><span class="hl-1">      }</span><br/><span class="hl-1">    }</span><br/><br/><span class="hl-1">    </span><span class="hl-0">return</span><span class="hl-1"> </span><span class="hl-5">res</span><span class="hl-1">;</span><br/><span class="hl-1">  },</span><br/><span class="hl-1">  {</span><br/><span class="hl-1">    </span><span class="hl-5">loading:</span><span class="hl-1"> </span><span class="hl-8">&quot;Submitting&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-4">success</span><span class="hl-5">:</span><span class="hl-1"> (</span><span class="hl-5">res</span><span class="hl-1">) </span><span class="hl-2">=&gt;</span><span class="hl-1"> </span><span class="hl-5">res</span><span class="hl-1">.</span><span class="hl-5">message</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-4">error</span><span class="hl-5">:</span><span class="hl-1"> (</span><span class="hl-5">res</span><span class="hl-1">: </span><span class="hl-9">Error</span><span class="hl-1">) </span><span class="hl-2">=&gt;</span><span class="hl-1"> </span><span class="hl-5">res</span><span class="hl-1">.</span><span class="hl-5">message</span><span class="hl-1">,</span><br/><span class="hl-1">  },</span><br/><span class="hl-1">);</span>
+</code><button type="button">Copy</button></pre>
+
+<h4 id="return-types" class="tsd-anchor-link">Return Types<a href="#return-types" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4><div style="display: flex; flex-direction: column; gap: 2rem;">
+    <table>
+      <thead>
+        <tr>
+          <th>Condition</th>
+          <th>Structure</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Success (no payload)</td>
+          <td><code>{ success: true, message: string }</code></td>
+        </tr>
+        <tr>
+          <td>Success (with payload)</td>
+          <td><code>{ success: true, message: string, payload: SuccessPayload }</code></td>
+        </tr>
+        <tr>
+          <td>Failure (from error map)</td>
+          <td>
+            <code>{ success: false, message: string, errorCode: keyof ErrorMap, errorPayload: ErrorMap[errorCode] }</code>
+          </td>
+        </tr>
+      </tbody>
+      <caption><strong>ActionResult&lt;SuccessPayload, ErrorMap&gt;</strong></caption>
+    </table>
+    <table>
+      <thead>
+        <tr>
+          <th>Condition</th>
+          <th>Structure</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Success (no context)</td>
+          <td><code>{ ok: true }</code></td>
+        </tr>
+        <tr>
+          <td>Success (with context)</td>
+          <td><code>{ ok: true, context: OutputContext }</code></td>
+        </tr>
+        <tr>
+          <td>Failure (from error map)</td>
+          <td>
+            <code>{ ok: false, errorCode: keyof ErrorMap, payload: ErrorMap[errorCode] }</code>
+          </td>
+        </tr>
+      </tbody>
+      <caption><strong>ValidationResult&lt;OutputContext, ErrorMap&gt;</strong></caption>
+    </table>
+</div></div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#next-actions"><span>Next <wbr/>Actions</span></a><ul><li><a href="#what-is-next-actions"><span>What is <wbr/>Next <wbr/>Actions?</span></a></li><li><a href="#usage-guide"><span>Usage <wbr/>Guide</span></a></li><li><ul><li><a href="#1-define-input-schema"><span>1. <wbr/>Define input schema</span></a></li><li><a href="#2-define-validators-for-user-session--role"><span>2. <wbr/>Define <wbr/>Validators for <wbr/>User <wbr/>Session &amp; <wbr/>Role</span></a></li><li><ul><li><a href="#what-are-validators"><span>What are <wbr/>Validators?</span></a></li><li><a href="#21-user-session-validator"><span>2.1 <wbr/>User <wbr/>Session <wbr/>Validator</span></a></li><li><a href="#22-user-role-validator"><span>2.2 <wbr/>User <wbr/>Role <wbr/>Validator</span></a></li></ul></li><li><a href="#3-build-the-action-with-validators"><span>3. <wbr/>Build the action with validators</span></a></li><li><a href="#4-define-the-server-action"><span>4. <wbr/>Define the server action</span></a></li><li><ul><li><a href="#action-functions-are-just-like-validators"><span>Action <wbr/>Functions are <wbr/>Just <wbr/>Like <wbr/>Validators!</span></a></li><li><a href="#do-you-need-to-write-validator-functions"><span>Do <wbr/>You <wbr/>Need to <wbr/>Write <wbr/>Validator <wbr/>Functions?</span></a></li></ul></li><li><a href="#5-invoking-the-actions-and-handling-errors"><span>5. <wbr/>Invoking the actions and handling errors</span></a></li><li><ul><li><a href="#return-types"><span>Return <wbr/>Types</span></a></li></ul></li></ul></li></ul></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="modules.html">next-actions - v0.3.0</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div><script>
+          try {
+            const generateLinkElement = document.querySelector(".tsd-generator a");
+            const link = document.createElement("a");
+            Object.assign(link, {
+              href: "https://github.com/dmnsgn/typedoc-material-theme",
+              target: "_blank",
+              rel: "noreferrer",
+              innerText: "typedoc-material-theme."
+            });
+            generateLinkElement.insertAdjacentElement("afterend", link);
+            generateLinkElement.insertAdjacentText("afterend", " with ");
+          } catch (error) {
+
+          }
+        </script></body></html>
