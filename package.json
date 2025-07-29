@@ -1,8 +1,16 @@
 {
-  "name": "next-actions",
-  "version": "0.3.0",
+  "name": "@swastikbhattacharyya/next-actions",
+  "version": "0.3.2",
   "description": "A type-safe utility for defining server actions and backend data access layers.",
   "type": "module",
+  "homepage": "https://github.com/SwastikBhattacharyya/next-actions#readme",
+  "bugs": {
+    "url": "https://github.com/SwastikBhattacharyya/next-actions/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SwastikBhattacharyya/next-actions.git"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",

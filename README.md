@@ -5,6 +5,8 @@ data access layers.
 
 ## What is Next Actions?
 
+[Read Full Documentation](https://swastikbhattacharyya.github.io/next-actions/)
+
 Next Actions is a lightweight and simple TypeScript utility library for
 building type-safe, validated server actions and data access layers using zod
 along with clearly defined and structured error responses.
@@ -355,5 +357,4 @@ toast.promise(
       </tbody>
       <caption><strong>ValidationResult&lt;OutputContext, ErrorMap&gt;</strong></caption>
     </table>
-
 </div>
