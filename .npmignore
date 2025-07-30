@@ -1,0 +1,16 @@
+/docs
+/example
+/node_modules
+/tests
+
+.prettierrc
+CHANGELOG.md
+cliff.toml
+eslint.config.mjs
+jest.config.js
+package.json
+pnpm-lock.yaml
+pnpm-workspace.yaml
+tsconfig.json
+tsup.config.ts
+typedoc.json
